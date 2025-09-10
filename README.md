@@ -4,13 +4,13 @@ A modern React application built with Vite and TypeScript for displaying, search
 
 ## Overview
 
-This project demonstrates feature modularization using React Context API for state management, ensuring clean separation of concerns and scalability. All core logic, including country data, filters, and pagination, is managed via context api.
+This project demonstrates feature modularization using Redux for state management, ensuring clean separation of concerns and scalability. All core logic, including country data, filters, and pagination, is managed via redux.
 
 ## Features
 
 - **TypeScript-first:** Type-safe codebase for reliability and maintainability
 - **Modular architecture:** Features separated into context, types, and components
-- **State management:** Centralized with React Context API
+- **State management:** Centralized with Redux
 - **Country listing:** Table view with columns for Name, Capital, Area, and Population
 - **Search:** Filter countries by name
 - **Sort:** Sort by Area or Population
@@ -22,7 +22,8 @@ This project demonstrates feature modularization using React Context API for sta
 - [React](https://react.dev/)
 - [Vite](https://vitejs.dev/)
 - [TypeScript](https://www.typescriptlang.org/)
-- [Context API](https://react.dev/reference/react/useContext)
+- [Zustand](https://zustand.docs.pmnd.rs/getting-started/introduction) (state management, Redux-like)
+
 
 ## Getting Started
 
@@ -56,7 +57,8 @@ _Note: The port may vary depending on your local setup; check your terminal for 
 
 ```
 src/
-  context/         # React Context API for country state management
+  hooks/           # Custom Hooks
+  store/           # Redux for country state management
   page/country/    # Filters and ListView components
   types/           # TypeScript types and constants
   App.tsx
