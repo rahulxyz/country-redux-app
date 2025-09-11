@@ -8,6 +8,11 @@ export default defineConfig(() =>
       globals: true, // use global test functions: describe, it, expect
       environment: "jsdom", // simulate browser environment
       setupFiles: "./src/setupTests.ts", // optional
+      coverage: {
+        provider: "istanbul", // required for coverage
+        reporter: ["text", "lcov"], // generates lcov.info
+        reportsDirectory: "coverage",
+      },
     },
   })
 );
